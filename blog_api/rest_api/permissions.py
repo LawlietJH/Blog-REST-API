@@ -23,23 +23,11 @@ class UpdateOwnProfile(permissions.BasePermission):
         return obj.id == request.user.id
 
 
-# class UpdateOwnStatus(permissions.BasePermission):
-#     ''' Permite actualizar el Status Feed del Usuario Propio '''
-#     def has_object_permission(self, request, view, obj):
-#         ''' Verifica si eñ Usuario esta Intentando Editar Su Propio Perfil '''
-        
-#         if request.method in permissions.SAFE_METHODS:
-#             return True
-        
-#         return obj.user_profile.id == request.user.id or request.user.is_superuser
-
-
 class UpdateWebsiteVisitCount(permissions.BasePermission):
     ''' Permite al Super Usuario Editar los contadores de visitas '''
 
     def has_permission(self, request, view):
         ''' Verifica si se intenta modificar el contador de visitas '''
-        # print(0, request.method)
         if request.method in permissions.SAFE_METHODS \
         or request.user.is_superuser:
             return True
@@ -48,7 +36,6 @@ class UpdateWebsiteVisitCount(permissions.BasePermission):
 
     def has_object_permission(self, request, view, obj):
         ''' Verifica si se intenta modificar el contador de visitas '''
-        # print(1, request.method)
         if request.method in permissions.SAFE_METHODS \
         or request.user.is_superuser:
             return True

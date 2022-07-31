@@ -6,11 +6,8 @@ from rest_api import views
 router = DefaultRouter()
 router.register('profile', views.UserProfileViewSet)
 router.register('visits', views.WebsiteVisitCountViewSet)
-# router.register('hello-viewset', views.HelloViewSet, basename='hello-viewset')
-# router.register('feed', views.UserProfileFeedViewSet)
 
 urlpatterns = [
-    # path('hello-view/', views.HelloAPIView.as_view()),
     path('xyzzy-login-web-page/', views.UserLoginApiView.as_view()),
     path('', include(router.urls)),
 ]

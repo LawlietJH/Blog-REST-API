@@ -2,11 +2,6 @@ from rest_framework import serializers
 from rest_api import models
 
 
-# class HelloSerializer(serializers.Serializer):
-#     ''' Serializa un campo para nuestra APIView '''
-#     name = serializers.CharField(max_length=10)
-
-
 class UserProfileSerializer(serializers.ModelSerializer):
     ''' Serializa un Objeto de Perfil de Usuario '''
 
@@ -36,15 +31,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         
         return super().update(instance, validated_data)
-
-
-# class ProfileFeedItemSerializer(serializers.ModelSerializer):
-#     ''' Serializador de Profile Users '''
-
-#     class Meta:
-#         model = models.ProfileFeedItem
-#         fields = ('id', 'user_profile', 'status_text', 'created_on')
-#         extra_kwargs = {'user_profile': {'read_only': True}}
 
 
 class WebsiteVisitCountSerializer(serializers.ModelSerializer):

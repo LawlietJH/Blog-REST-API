@@ -57,21 +57,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-# class ProfileFeedItem(models.Model):
-#     ''' Perfil de Status Update '''
-#     user_profile = models.ForeignKey(
-#         settings.AUTH_USER_MODEL,
-#         on_delete = models.CASCADE
-#     )
-
-#     status_text = models.CharField(max_length=255)
-#     created_on = models.DateTimeField(auto_now_add=True)
-
-#     def __str__(self):
-#         ''' Devuelve el modelo como cadena de texto '''
-#         return self.status_text
-
-
 class WebsiteVisitCount(models.Model):
     ''' Modelo Base de Datos para Contador de Vistas en la Web '''
     page_id = models.AutoField(primary_key=True)
