@@ -1,7 +1,7 @@
 from .base import *
 
-DEBUG = False
-ALLOWED_HOSTS = ['deleonblogrestapi.herokuapp.com', 'lawlietjh.github.io']
+DEBUG = True
+ALLOWED_HOSTS = []
 
 
 # Database
@@ -13,5 +13,3 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
-
-STATICFILES_DIRS = (BASE_DIR, 'static')
