@@ -1,3 +1,4 @@
+from rest_framework.authtoken.models import Token
 from rest_framework import serializers
 from rest_api import models
 
@@ -53,13 +54,21 @@ class WebsiteVisitCountSerializer(serializers.ModelSerializer):
         webpage   = validated_data.get('webpage')
         visits    = validated_data.get('visits')
         is_active = validated_data.get('is_active')
-        if webpage:
-            instance.webpage = webpage
-        if is_active.__class__ == bool:
-            instance.is_active = is_active
-        if visits.__class__ == int:
-            instance.visits = visits
-        elif not webpage and not is_active.__class__ == bool:
+        token     = validated_data.get('token')
+        if token == Token.objects.get(user_id=1).key:
+            if webpage:
+                instance.webpage = webpage
+            if is_active.__class__ == bool:
+                instance.is_active = is_active
+            if visits.__class__ == int:
+                instance.visits = visits
+            elif not webpage \
+            and not is_active.__class__ == bool:
+                instance.visits += 1
+            instance.save()
+        elif not webpage \
+        and not is_active.__class__ == bool \
+        and not visits.__class__ == int:
             instance.visits += 1
-        instance.save()
+            instance.save()
         return instance

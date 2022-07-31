@@ -63,6 +63,7 @@ class WebsiteVisitCount(models.Model):
     webpage = models.CharField(max_length=255, unique=True)
     visits = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
+    token = models.CharField(max_length=255, default=None)
 
     REQUIRED_FIELDS = ['webpage']
 

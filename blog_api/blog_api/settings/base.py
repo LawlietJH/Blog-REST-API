@@ -105,7 +105,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configuraciones Personales:
 
 AUTH_USER_MODEL = 'rest_api.UserProfile'
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-  'https://lawlietjh.github.io/',
-)
+

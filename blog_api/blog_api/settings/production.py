@@ -15,3 +15,8 @@ DATABASES = {
 }
 
 STATICFILES_DIRS = (BASE_DIR, 'static')
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+  'https://lawlietjh.github.io/',
+)

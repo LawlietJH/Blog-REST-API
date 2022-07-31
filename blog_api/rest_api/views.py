@@ -29,10 +29,8 @@ class WebsiteVisitCountViewSet(viewsets.ModelViewSet):
     ''' Maneja el Crear, Leer y Actualizar el Website Visit Count '''
     serializer_class = serializers.WebsiteVisitCountSerializer
     queryset = models.WebsiteVisitCount.objects.all()
-    authentication_classes = (TokenAuthentication,)
     permission_classes = (
         permissions.UpdateWebsiteVisitCount,
-        IsAuthenticated,
     )
     filter_backends = (filters.SearchFilter,)
     search_fields = ('page_id', 'webpage',)
