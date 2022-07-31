@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-2ag-wya)5uj(0er_*1cn+)72rj(&7p)w8+@h9wfp^3bpj@-(*(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -55,17 +55,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'blog_api.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
