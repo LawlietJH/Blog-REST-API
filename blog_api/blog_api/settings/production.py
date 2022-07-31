@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['https://deleonblogrestapi.herokuapp.com/']
+ALLOWED_HOSTS = ['deleonblogrestapi.herokuapp.com', 'lawlietjh.github.io']
 
 
 # Database
