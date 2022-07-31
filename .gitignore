@@ -1,3 +1,7 @@
+blog_api/rest_api/migrations/
+django/
+*.bat
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
