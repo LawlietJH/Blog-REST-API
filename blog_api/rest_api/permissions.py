@@ -1,5 +1,4 @@
 from rest_framework import permissions
-from django.dispatch import receiver
 
 
 class UpdateOwnProfile(permissions.BasePermission):
