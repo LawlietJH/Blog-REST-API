@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from rest_api.db import (
+from app.rest_api.db import (
     get_views, get_view, add_views,
     update_view, reset_view
 )

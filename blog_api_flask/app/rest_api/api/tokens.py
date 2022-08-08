@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from rest_api.db import get_token
+from app.rest_api.db import get_token
 
 
 def authorizedToken(func):

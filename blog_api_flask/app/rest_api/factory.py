@@ -5,7 +5,7 @@ from flask import Flask, render_template
 from flask.json import JSONEncoder
 from flask_cors import CORS
 from bson import json_util, ObjectId
-from rest_api.api.views import views_api
+from .api.views import views_api
 
 class MongoJsonEncoder(JSONEncoder):
     def default(self, obj):
