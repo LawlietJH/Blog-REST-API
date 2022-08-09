@@ -3,9 +3,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2ag-wya)5uj(0er_*1cn+)72rj(&7p)w8+@h9wfp^3bpj@-(*('
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
