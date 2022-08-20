@@ -4,9 +4,6 @@ import bson
 from flask import current_app, g
 from werkzeug.local import LocalProxy
 from pymongo import MongoClient, DESCENDING
-# from pymongo.errors import DuplicateKeyError, OperationFailure
-from bson.objectid import ObjectId
-# from bson.errors import InvalidId
 
 
 

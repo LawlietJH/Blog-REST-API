@@ -16,6 +16,7 @@ CORS(views_api)
 def getViews():
 
     views, qty = get_views()
+    views.sort(key=lambda x: x['views'], reverse=True)
 
     response = {
         "qty": qty,
